@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx</Extensions>
+    </Filter>
+    <Filter Include="Exported Files">
+      <UniqueIdentifier>{8f4fbe92-0b92-48e4-a9a2-020ba98f8eb3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Additional Files">
+      <UniqueIdentifier>{d2aa6ef1-c97b-4d12-98b2-4aa0c2c6665b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Additional Files\Lib">
+      <UniqueIdentifier>{8d1e6e52-d943-48b7-b14e-58d83f176c1c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Interfaces">
+      <UniqueIdentifier>{be6aa8f7-3311-4d26-8d68-2c060fb72d5c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Implementation\NCSiTstModule.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Implementation\NCSiTstSampleInterface.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Implementation\SampleInterfaceTest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Implementation\SiTstGuids.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Implementation\SiTstpch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Implementation\SiTsttypes.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Implementation\NCSiTstModule.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Implementation\NCSiTstSampleInterface.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Implementation\SiTstpch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Implementation\SiTstresource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Implementation\SiTsttypes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Implementation\SiTstfwd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Interfaces\AdinsGuids.h">
+      <Filter>Source Files\Interfaces</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Implementation\SampleInterfaceTest.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Implementation\Res\SampleInterfaceTest.rgs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Implementation\Res\SampleInterfaceTest1.rgs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Implementation\SampleInterfaceTest.def">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Implementation\SampleInterfaceTestd.def">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Implementation\Readme.txt" />
+    <None Include="Implementation\SampleInterfaceTestu.def">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Implementation\SampleInterfaceTestud.def">
+      <Filter>Source Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Midl Include="Interfaces\AdinsBaseTypesInterface.idl">
+      <Filter>Source Files\Interfaces</Filter>
+    </Midl>
+    <Midl Include="Interfaces\AdinsExperimentNotifyInterface1.idl">
+      <Filter>Source Files\Interfaces</Filter>
+    </Midl>
+    <Midl Include="Interfaces\CommonInterface1.idl">
+      <Filter>Source Files\Interfaces</Filter>
+    </Midl>
+    <Midl Include="Interfaces\IdtTypesInterface.idl">
+      <Filter>Source Files\Interfaces</Filter>
+    </Midl>
+    <Midl Include="Interfaces\PersistDirectory.idl">
+      <Filter>Source Files\Interfaces</Filter>
+    </Midl>
+    <Midl Include="Interfaces\SiInterface6.idl">
+      <Filter>Source Files\Interfaces</Filter>
+    </Midl>
+    <Midl Include="Interfaces\SiTstInterface6.idl">
+      <Filter>Source Files\Interfaces</Filter>
+    </Midl>
+    <Midl Include="Interfaces\AdinsSiTypesInterface.idl">
+      <Filter>Source Files\Interfaces</Filter>
+    </Midl>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,184 @@
+//----------------------------------------------------------------------------
+// N O L D U S   I N F O R M A T I O N   T E C H N O L O G Y   B . V .
+//----------------------------------------------------------------------------
+// Project    :   Common
+// Module     :   Interface
+// File       :   AdinsSiTypesInterface.idl
+//----------------------------------------------------------------------------
+// Note       :  Copyright (c) 2022 Noldus information technology  b.v.
+//               Noldus reserves the right to change the interface with EthoVision XT 
+//               without notice.
+//----------------------------------------------------------------------------
+import "oaidl.idl";
+import "ocidl.idl";
+import "adinsbasetypesinterface.idl";
+
+
+//----------------------------------------------------------------------------
+// struct NECAdinsIdtSiSampleZones
+//----------------------------------------------------------------------------
+// Description: 'in zone' sample information
+//----------------------------------------------------------------------------
+typedef struct tagNECAdinsIdtSiSampleZones
+{
+    long                                m_nZones;       //nr of zones filled in in 'm_aZones'
+    long                                m_aZones[64];   //make it a 'varying' MIDL array so that it can be part of a nested struct
+} NECAdinsIdtSiSampleZones;
+
+
+// interface 2
+
+
+//----------------------------------------------------------------------------
+// struct NECAdinsIdtSiTrialInfo2
+//----------------------------------------------------------------------------
+// Description: trial information
+//----------------------------------------------------------------------------
+typedef struct tagNECAdinsIdtSiTrialInfo2
+{
+    long                                m_idTrial;
+    wchar_t                             m_szName[g_lAdinsIdtBaseNameLength];
+    double                              m_dSampleRate;
+    NECAdinsIdtBaseArenasInfo           m_infoArenas;
+    NECAdinsIdtBaseZonesInfo            m_infoZones;
+    NECAdinsIdtBaseSubjectsInfo         m_infoSubjects;
+} NECAdinsIdtSiTrialInfo2;
+
+
+//----------------------------------------------------------------------------
+// struct NECAdinsIdtSiTrackSetInfo2
+//----------------------------------------------------------------------------
+// Description: trackset information
+//----------------------------------------------------------------------------
+typedef struct tagNECAdinsIdtSiTrackSetInfo2
+{
+    NECAdinsIdtBaseTrackSetId           m_idTrackSet;
+} NECAdinsIdtSiTrackSetInfo2;
+
+
+//----------------------------------------------------------------------------
+// struct NECAdinsIdtSiSampleTrack2
+//----------------------------------------------------------------------------
+// Description: sample track information
+//----------------------------------------------------------------------------
+typedef struct tagNECAdinsIdtSiSampleTrack2
+{
+    NECAdinsIdtBaseTrackId              m_idTrack;
+    NECAdinsIdtBaseSamplePoint          m_ptCog;
+    NECAdinsIdtBaseSamplePoint          m_ptNose;
+    NECAdinsIdtBaseSamplePoint          m_ptTail;
+    NECAdinsIdtBaseSampleFeatureDouble  m_ftrArea;
+    NECAdinsIdtBaseSampleFeatureDouble  m_ftrChangedArea;
+    NECAdinsIdtBaseSampleFeatureDouble  m_ftrElongation;
+    NECAdinsIdtSiSampleZones            m_zones;
+} NECAdinsIdtSiSampleTrack2;
+
+
+//----------------------------------------------------------------------------
+// struct NECAdinsIdtSiSampleTrackSet2
+//----------------------------------------------------------------------------
+// Description: sample trackset information
+//----------------------------------------------------------------------------
+typedef struct tagNECAdinsIdtSiSampleTrackSet2
+{
+    NECAdinsIdtBaseTrackSetId           m_idTrackSet;
+    NECAdinsIdtBaseSampleFeatureDouble  m_ftrPixelChange;
+} NECAdinsIdtSiSampleTrackSet2;
+
+
+//----------------------------------------------------------------------------
+// struct NECAdinsIdtSiSampleInfo2
+//----------------------------------------------------------------------------
+// Description: sample information
+//----------------------------------------------------------------------------
+typedef struct tagNECAdinsIdtSiSampleInfo2
+{
+    hyper                               m_nFrame;
+    hyper                               m_nMissed;
+} NECAdinsIdtSiSampleInfo2;
+
+
+// interface 3
+
+
+//----------------------------------------------------------------------------
+// struct NECAdinsIdtSiTrialInfo3
+//----------------------------------------------------------------------------
+// Description: trial information
+//----------------------------------------------------------------------------
+typedef struct tagNECAdinsIdtSiTrialInfo3
+{
+    long                                m_idTrial;
+    wchar_t                             m_szName[g_lAdinsIdtBaseNameLength];
+    double                              m_dSampleRate;
+    NECAdinsIdtBaseArenasInfo           m_infoArenas;
+    NECAdinsIdtBaseZonesInfo2           m_infoZones;
+    NECAdinsIdtBasePoisInfo             m_infoPois;
+    NECAdinsIdtBaseSubjectsInfo         m_infoSubjects;
+} NECAdinsIdtSiTrialInfo3;
+
+
+// interface 4
+
+
+//----------------------------------------------------------------------------
+// struct NECAdinsIdtSiSampleTrack4
+//----------------------------------------------------------------------------
+// Description: sample track information
+//----------------------------------------------------------------------------
+typedef struct tagNECAdinsIdtSiSampleTrack4
+{
+    NECAdinsIdtBaseTrackId              m_idTrack;
+    NECAdinsIdtBaseSamplePoint          m_ptCog;
+    NECAdinsIdtBaseSamplePoint          m_ptNose;
+    NECAdinsIdtBaseSamplePoint          m_ptTail;
+    NECAdinsIdtBaseSamplePoint          m_ptLed;
+    NECAdinsIdtBaseSampleFeatureDouble  m_ftrArea;
+    NECAdinsIdtBaseSampleFeatureDouble  m_ftrChangedArea;
+    NECAdinsIdtBaseSampleFeatureDouble  m_ftrElongation;
+    NECAdinsIdtSiSampleZones            m_zones;
+} NECAdinsIdtSiSampleTrack4;
+
+
+// interface 5
+
+
+//----------------------------------------------------------------------------
+// struct NECAdinsIdtSiSampleTrack5
+//----------------------------------------------------------------------------
+// Description: sample track information
+//----------------------------------------------------------------------------
+typedef struct tagNECAdinsIdtSiSampleTrack5
+{
+    NECAdinsIdtBaseTrackId              m_idTrack;
+    NECAdinsIdtBaseSampleTrackData      m_sampleData;
+    NECAdinsIdtSiSampleZones            m_zones;
+} NECAdinsIdtSiSampleTrack5;
+
+
+// interface 6
+        
+
+//----------------------------------------------------------------------------
+// struct NECAdinsIdtSiSampleTrackSet3
+//----------------------------------------------------------------------------
+// Description: sample trackset information
+//----------------------------------------------------------------------------
+typedef struct tagNECAdinsIdtSiSampleTrackSet3
+{
+    NECAdinsIdtBaseTrackSetId           m_idTrackSet;
+    NECAdinsIdtBaseSampleTrackSet       m_sample;
+} NECAdinsIdtSiSampleTrackSet3;
+
+
+//----------------------------------------------------------------------------
+// struct NECAdinsIdtSiSampleTrack6
+//----------------------------------------------------------------------------
+// Description: sample track information
+//----------------------------------------------------------------------------
+typedef struct tagNECAdinsIdtSiSampleTrack6
+{
+    NECAdinsIdtBaseTrackId              m_idTrack;
+    NECAdinsIdtBaseSampleTrack          m_sample;
+    NECAdinsIdtSiSampleZones            m_zones;
+} NECAdinsIdtSiSampleTrack6;

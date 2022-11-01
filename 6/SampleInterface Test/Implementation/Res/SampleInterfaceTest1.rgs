@@ -1,0 +1,28 @@
+HKCR
+{
+	SampleInterfaceTest.SampleInterfaceTest.6 = s 'SampleInterfaceTest6 Class'
+	{
+		CLSID = s '{72B09CC2-F086-47FC-88B4-07767426A471}'
+	}
+	SampleInterfaceTest.SampleInterfaceTest = s 'SampleInterfaceTest6 Class'
+	{
+		CLSID = s '{72B09CC2-F086-47FC-88B4-07767426A471}'
+		CurVer = s 'SampleInterfaceTest.SampleInterfaceTest.54'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {72B09CC2-F086-47FC-88B4-07767426A471} = s 'SampleInterfaceTest6 Class'
+		{
+		   ForceRemove 'Implemented Categories'
+			ProgID = s 'SampleInterfaceTest.SampleInterfaceTest.6'
+			VersionIndependentProgID = s 'SampleInterfaceTest.SampleInterfaceTest'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			val AppID = s '%APPID%'
+			'TypeLib' = s '{72B09CC2-F086-47FC-88B4-07767426A472}'
+		}
+	}
+}

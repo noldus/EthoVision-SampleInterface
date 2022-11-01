@@ -1,0 +1,39 @@
+//----------------------------------------------------------------------------
+// N O L D U S   I N F O R M A T I O N   T E C H N O L O G Y   B . V .
+//----------------------------------------------------------------------------
+// Project    :   Common
+// Module     :   Interface
+// File       :   SiInterface5.idl
+//----------------------------------------------------------------------------
+// Note       :  Copyright (c) 2022 Noldus information technology  b.v.
+//               Noldus reserves the right to change the interface with EthoVision XT 
+//               without notice.
+//----------------------------------------------------------------------------
+import "oaidl.idl";
+import "ocidl.idl";
+import "adinsbasetypesinterface.idl";
+import "adinssitypesinterface.idl";
+import "persistdirectory.idl";
+
+
+//----------------------------------------------------------------------------
+// interface INECAdinsSiSampleInterface6
+//----------------------------------------------------------------------------
+// Description: sample interface 6 (a.k.a. RTE)
+//----------------------------------------------------------------------------
+[
+    object,
+    uuid(B2998981-3020-4B94-81E8-2E6B001E8EF7),
+    helpstring("INECAdinsSiSampleInterface6 Interface"),
+    pointer_default(unique)
+]
+interface INECAdinsSiSampleInterface6 : IPersistDirectory
+{
+    HRESULT SetStartTrial   ([in] const NECAdinsIdtSiTrialInfo3* pTrialInfo);
+    HRESULT SetStopTrial    ([in] long idTrial);
+    
+    HRESULT SetStartTrackSet([in] const NECAdinsIdtSiTrackSetInfo2* pTrackSetInfo);
+    HRESULT SetStopTrackSet ([in] const NECAdinsIdtBaseTrackSetId* pTrackSetId);
+
+    HRESULT ProcessSample   ([in] const NECAdinsIdtSiSampleInfo2* pSample, [in] long nSamplesTrackSet, [in, size_is(nSamplesTrackSet)] const NECAdinsIdtSiSampleTrackSet3* pSamplesTrackSet, [in] long nSamplesTrack, [in, size_is(nSamplesTrack)] const NECAdinsIdtSiSampleTrack6* pSamplesTrack);
+};

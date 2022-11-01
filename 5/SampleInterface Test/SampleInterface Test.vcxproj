@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{ED846360-D9EA-4CFF-9D00-D528E9383B96}</ProjectGuid>
+    <RootNamespace>SampleInterface Test</RootNamespace>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccProvider>
+    </SccProvider>
+    <Keyword>AtlProj</Keyword>
+    <SccAuxPath>
+    </SccAuxPath>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfAtl>Dynamic</UseOfAtl>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfAtl>Dynamic</UseOfAtl>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="PropertySheets\Noldus.Cpp.Global.VS2019.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="PropertySheets\Noldus.Cpp.Global.VS2019.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">SampleInterfaceTestud</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">SampleInterfaceTestu</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <CustomBuildStep>
+      <Command>
+      </Command>
+      <Outputs>%(Outputs)</Outputs>
+    </CustomBuildStep>
+    <Midl>
+      <OutputDirectory>$(ProjectDir)Implementation\</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <DllDataFileName>dlldata.c</DllDataFileName>
+      <InterfaceIdentifierFileName>
+      </InterfaceIdentifierFileName>
+      <ProxyFileName>
+      </ProxyFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)Interfaces;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>
+      </PreprocessorDefinitions>
+      <TypeLibraryName>res\SampleInterfaceTest.tlb</TypeLibraryName>
+    </Midl>
+    <ClCompile>
+      <PreprocessorDefinitions>NOLDUS_WIN64;NOLDUS_UNICODE;_WINDOWS;NDEBUG;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>sitstpch.h</PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <RegisterOutput>false</RegisterOutput>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <ModuleDefinitionFile>Implementation\$(TargetName).def</ModuleDefinitionFile>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <ImportLibrary>$(OutDir)$(TargetName).lib</ImportLibrary>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeaderFile>sitstpch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>$(ProjectDir)Interfaces;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>
+      </PreprocessorDefinitions>
+      <OutputDirectory>$(ProjectDir)Implementation\</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <DllDataFileName>dlldata.c</DllDataFileName>
+      <TypeLibraryName>res\SampleInterfaceTest.tlb</TypeLibraryName>
+    </Midl>
+    <Link>
+      <ModuleDefinitionFile>Implementation\$(TargetName).def</ModuleDefinitionFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Implementation\NCSiTstModule.cpp" />
+    <ClCompile Include="Implementation\NCSiTstSampleInterface.cpp" />
+    <ClCompile Include="Implementation\SampleInterfaceTest.cpp" />
+    <ClCompile Include="Implementation\SiTstGuids.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Implementation\SiTstpch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Implementation\SiTsttypes.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Implementation\NCSiTstModule.h" />
+    <ClInclude Include="Implementation\NCSiTstSampleInterface.h" />
+    <ClInclude Include="Implementation\SiTstfwd.h" />
+    <ClInclude Include="Implementation\SiTstpch.h" />
+    <ClInclude Include="Implementation\SiTstresource.h" />
+    <ClInclude Include="Implementation\SiTsttypes.h" />
+    <ClInclude Include="Interfaces\AdinsGuids.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Implementation\SampleInterfaceTest.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Implementation\Readme.txt" />
+    <None Include="Implementation\Res\SampleInterfaceTest.rgs" />
+    <None Include="Implementation\Res\SampleInterfaceTest1.rgs" />
+    <CustomBuildStep Include="Implementation\Res\Additional Files\lib\CopyLibExternal.bat">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <None Include="Implementation\SampleInterfaceTest.def" />
+    <None Include="Implementation\SampleInterfaceTestd.def" />
+    <None Include="Implementation\SampleInterfaceTestu.def" />
+    <None Include="Implementation\SampleInterfaceTestud.def" />
+    <Midl Include="Interfaces\SiInterface5.idl" />
+    <Midl Include="Interfaces\SiTstInterface5.idl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Midl Include="Interfaces\AdinsSiTypesInterface.idl" />
+    <Midl Include="Interfaces\CommonInterface1.idl" />
+    <Midl Include="Interfaces\IdtTypesInterface.idl" />
+    <Midl Include="Interfaces\PersistDirectory.idl" />
+    <Midl Include="Interfaces\AdinsBaseTypesInterface.idl" />
+    <Midl Include="Interfaces\AdinsExperimentNotifyInterface1.idl" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

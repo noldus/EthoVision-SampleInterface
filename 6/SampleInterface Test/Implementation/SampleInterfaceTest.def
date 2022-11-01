@@ -1,0 +1,9 @@
+; SampleInterfaceTest.def : Declares the module parameters.
+
+LIBRARY      "SampleInterfaceTest.dll"
+
+EXPORTS
+	DllCanUnloadNow		PRIVATE
+	DllGetClassObject	PRIVATE
+	DllRegisterServer	PRIVATE
+	DllUnregisterServer	PRIVATE

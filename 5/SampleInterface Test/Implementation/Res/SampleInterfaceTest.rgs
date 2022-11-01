@@ -1,0 +1,18 @@
+HKCR
+{
+	NoRemove AppID
+	{
+		'%APPID%' = s 'SampleInterfaceTest'
+		'SampleInterfaceTest.dll'
+		{
+			val AppID = s '%APPID%'
+		}
+	}
+   NoRemove 'Component Categories'
+   {
+       NoRemove {38738E07-66B9-4F2B-BB99-0A0F9F047A99}
+       {
+           NoRemove val 0 = s 'Vts Sample Interface 5'
+       }
+   }
+}

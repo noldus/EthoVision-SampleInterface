@@ -1,0 +1,60 @@
+//----------------------------------------------------------------------------
+// N O L D U S   I N F O R M A T I O N   T E C H N O L O G Y   B . V .
+//----------------------------------------------------------------------------
+// Project    :   Common
+// Module     :   Interface
+// File       :   AdinsExperimentInterface2.idl
+//----------------------------------------------------------------------------
+// Note       :  Copyright (c) 2022 Noldus information technology  b.v.
+//               Noldus reserves the right to change the interface with EthoVision XT 
+//               without notice.
+//----------------------------------------------------------------------------
+import "oaidl.idl";
+import "ocidl.idl";
+import "adinsbasetypesinterface.idl";
+
+
+//----------------------------------------------------------------------------
+// interface INECAdinsExperimentInterface2
+//----------------------------------------------------------------------------
+// Description: outbound VTS experiment interface
+// TODO       : - add ATC, MER, hardware, trackset
+//              - use IEnum
+//----------------------------------------------------------------------------
+[
+    object,
+    uuid(EB0D99B3-0936-48e0-A9A7-E1F684780170),
+    helpstring("INECAdinsExperimentInterface2 Interface"),
+    pointer_default(unique)
+]
+interface INECAdinsExperimentInterface2 : IUnknown
+{
+    HRESULT GetDirectoryExperiment          ([out, string] wchar_t** ppszwDir);
+
+    HRESULT GetFeatures                     ([out] NECAdinsIdtBaseFeatures* pFeatures);
+
+    HRESULT GetSubjectsInfo                 ([out] NECAdinsIdtBaseSubjectsInfo* pSubjects);
+    HRESULT GetArenasInfo                   ([out] NECAdinsIdtBaseArenasInfo* pSubjects);
+    HRESULT GetZonesInfo                    ([out] NECAdinsIdtBaseZonesInfo2* pZones);
+    HRESULT GetPoisInfo                     ([out] NECAdinsIdtBasePoisInfo* pPois);
+        
+    HRESULT GetRulesInfo                    ([out] NECAdinsIdtBaseRulesInfo* pRules);
+    HRESULT GetReferencesInfo               ([out] NECAdinsIdtBaseReferencesInfo* pReferences);
+    HRESULT GetConditionsInfo               ([out] NECAdinsIdtBaseConditionsInfo* pConditions);
+    HRESULT GetActionsInfo                  ([out] NECAdinsIdtBaseActionsInfo* pActions);
+    HRESULT GetOperatorsInfo                ([out] NECAdinsIdtBaseOperatorsInfo* pOperators);
+    HRESULT GetVariablesInfo                ([out] NECAdinsIdtBaseVariablesInfo* pVariables);
+    
+    HRESULT GetDeviceTypesInfo              ([out] NECAdinsIdtBaseDeviceTypes* pDeviceTypes);
+    HRESULT GetDeviceTypeCommandSignalsInfo ([in] long idDeviceType, [out] NECAdinsIdtBaseCommands* pCommands, [out] NECAdinsIdtBaseSignals* pSignals);
+    HRESULT GetDevicesInfo                  ([out] NECAdinsIdtBaseDevices* pDevices);
+    
+    HRESULT GetBehaviorGroupsInfo           ([out] NECAdinsIdtBaseBehaviorGroupsInfo* pBehaviorGroups);
+    HRESULT GetBehaviorsInfo                ([in] long idBehaviorGroup, [out] NECAdinsIdtBaseBehaviorsInfo* pBehaviors);
+
+    HRESULT GetArenaSetupsInfo              ([out] NECAdinsIdtBaseArenaSetupsInfo* pArenaSetups);
+    HRESULT GetTrialControlProfilesInfo     ([out] NECAdinsIdtBaseTrialControlProfilesInfo* pTrialControlProfiles);
+    HRESULT GetDetectionProfilesInfo        ([out] NECAdinsIdtBaseDetectionProfilesInfo* pDetectionProfiles);
+
+    HRESULT GetTrialsInfo                   ([out] NECAdinsIdtBaseTrialsInfo* pTrials);
+};

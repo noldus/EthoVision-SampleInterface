@@ -1,0 +1,41 @@
+//----------------------------------------------------------------------------
+// N O L D U S   I N F O R M A T I O N   T E C H N O L O G Y   B . V .
+//----------------------------------------------------------------------------
+// Project    :   Common
+// Module     :   Interface
+// File       :   AdinsExperimentNotifyInterface1.idl
+//----------------------------------------------------------------------------
+// Note       :  Copyright (c) 2022 Noldus information technology  b.v.
+//               Noldus reserves the right to change the interface with EthoVision XT 
+//               without notice.
+//----------------------------------------------------------------------------
+import "oaidl.idl";
+import "ocidl.idl";
+import "adinsbasetypesinterface.idl";
+
+
+typedef struct tagNECAdinsIdtExperiment
+{
+    [string] const wchar_t* m_pszName;
+    [string] const wchar_t* m_pszPath;
+    [string] const wchar_t* m_pszDataDir;
+} NECAdinsIdtExperiment;
+
+
+//----------------------------------------------------------------------------
+// interface INECAdinsExperimentNotifyInterface
+//----------------------------------------------------------------------------
+// Description: notify experiment events interface
+//----------------------------------------------------------------------------
+[
+    object,
+    uuid(EB0D99B3-0936-48e0-A9A7-E1F68478016A),
+    helpstring("NECAdinsExperimentNotifyInterface1 Interface"),
+    pointer_default(unique)
+]
+interface INECAdinsExperimentNotifyInterface : IUnknown
+{
+    HRESULT Start            ();
+    HRESULT Close            ();
+    HRESULT SetExperimentInfo([in] const NECAdinsIdtExperiment* pExperiment);
+};

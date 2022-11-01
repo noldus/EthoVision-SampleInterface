@@ -1,0 +1,36 @@
+//----------------------------------------------------------------------------
+// N O L D U S   I N F O R M A T I O N   T E C H N O L O G Y   B . V .
+//----------------------------------------------------------------------------
+// Project    :   SampleInterface Test
+// Module     :   SampleInterface Test
+// File       :   SiTstInterface5.idl
+//----------------------------------------------------------------------------
+// Note       :  Copyright (c) 2022 Noldus information technology  b.v.
+//               Noldus reserves the right to change the interface with EthoVision XT 
+//               without notice.
+//----------------------------------------------------------------------------
+import "oaidl.idl";
+import "ocidl.idl";
+import "adinsexperimentnotifyinterface1.idl";
+import "commoninterface1.idl";
+import "siinterface5.idl";
+
+[
+    uuid(72B09CC2-F086-47FC-88B4-07767426A462),
+    version(1.0),
+    helpstring("SampleInterface Test 5.0 Type Library")
+]
+library SampleInterfaceLib5
+{
+    importlib("stdole2.tlb");
+    [
+        uuid(72B09CC2-F086-47FC-88B4-07767426A461),
+        helpstring("SampleInterface5 Test Class")
+    ]
+    coclass SampleInterfaceTest5
+    {
+        interface           INCCommonInterface;
+        interface           INECAdinsExperimentNotifyInterface;
+        [default] interface INECAdinsSiSampleInterface5;
+    };
+};
